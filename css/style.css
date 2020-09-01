@@ -18,13 +18,48 @@
   --Family: [Poppins](https://fonts.google.com/specimen/Poppins);
 }
 @media screen and (max-width: 375px) {
- .portada{
-     max-width: 375px;
-     margin: auto;
-     position: relative;
-     background-color: var(--gray) ;
- }
- .header{
-     display: flex;
- }
+  .portada {
+    max-width: 375px;
+    margin: auto;
+    position: relative;
+    background-color: var(--gray);
+  }
+  .header {
+    display: flex;
+    padding: 10px;
+  }
+  .burguer-button {
+    width: 40px;
+    /* border-radius: 50%; */
+    line-height: 40px;
+    height: 40px;
+    background-color: red;
+    display: inline-block;
+    text-align: center;
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    cursor: pointer;
+    z-index: 3;
+    color: red;
+    /* display: none; */
+  }
+
+  .line
+  .menu{
+    background-color: rgba(255, 60, 88, .8);
+    position: fixed;
+    left: -100%;
+    top: 0;
+    z-index: 2;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    transition: .3s;
+  }
+  .menu.active{
+    left: 0;
+  }
 }
