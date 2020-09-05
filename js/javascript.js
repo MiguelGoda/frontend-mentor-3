@@ -1,5 +1,5 @@
-var $burguerButton = document.getElementById("burguer-button");
-var $menu = document.getElementById("menu");
+let $burguerButton = document.getElementById("burguer-button");
+let $menu = document.getElementById("menu");
 function toggleMenu() {
   $menu.classList.toggle("active");
 }
@@ -9,7 +9,8 @@ function showMenu() {
 function hideMenu() {
   $menu.classList.remove("active");
 }
-var consulta = window.matchMedia("(max-width: 375px)");
+let consulta = window.matchMedia("(max-width: 375px)");
+console.log("mobile")
 consulta.addListener(mediaQuery);
 function mediaQuery() {
   if (consulta.matches) {

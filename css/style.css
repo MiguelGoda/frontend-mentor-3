@@ -52,12 +52,19 @@
     width: 360px;
     background-color: var(--Dark_Violet);
     height: 300px;
-    padding: 15px 0px;
+    padding: 10px 0px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+    transition: .3s;
+    position: fixed;
+    right: -100%;
+    z-index: 2;
+  }
+  .menu.active {
+    right: 7px;
   }
   .menu li a {
     display: block;
@@ -71,9 +78,6 @@
   }
   .menu a {
     text-decoration: none;
-  }
-  .menu.active {
-    left: 0;
   }
   .button.secondary {
     border-top: 1px rgba(156, 154, 154, 0.418) solid;
@@ -95,8 +99,8 @@
 
   .illustration--contenedor {
     display: flex;
-    /* flex-direction: row; */
     justify-content: flex-start;
+    overflow: hidden;
   }
   .describe {
     display: flex;
@@ -105,14 +109,14 @@
     align-items: center;
   }
   .describe h1 {
-    border: solid red 1px;
+    /* border: solid red 1px; */
     width: 200px;
     font-weight: 700;
     text-align: center;
   }
   .describe p {
     text-align: center;
-    border: solid 1px red;
+    /* border: solid 1px red; */
     width: 250px;
   }
   .describe button {
