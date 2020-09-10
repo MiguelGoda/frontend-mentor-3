@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
 
 * {
   margin: 0;
@@ -15,7 +15,7 @@
   --Very_Dark_Blue: hsl(255, 11%, 22%);
   --Very_Dark_Violet: hsl(260, 8%, 14%);
   --Font_size: 18px;
-  --Family: 'Poppins', sans-serif;
+  --Family: "Poppins", sans-serif;
 }
 @media screen and (max-width: 375px) {
   body {
@@ -58,7 +58,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    transition: .3s;
+    transition: 0.3s;
     position: fixed;
     right: -100%;
     z-index: 2;
@@ -120,15 +120,73 @@
     color: var(--Gray);
     width: 330px;
   }
-  .describe button {
+  .get-started {
     width: 180px;
-    background-color: var(--Cyan);
-    font-size: var(--Font_size);
-    color: white;
-    font-weight: 700;
     padding: 10px;
     border-radius: 20px;
     margin-top: 15px;
+  }
+  .btn {
+    font-weight: 500;
+    color: white;
+    text-align: center;
+    background-color: var(--Cyan);
+    font-size: var(--Font_size);
     border: none;
+  }
+  .formulario {
+    position: relative;
+    margin-top: 50px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .formulario--contenedor {
+    width: 330px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(/images/bg-shorten-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: 250px;
+    background-color: var(--Dark_Violet);
+    background-position-x: right;
+    height: auto;
+  }
+  .shorten{
+    width: 80%;
+    padding: 10px;
+    margin: 25px 15px 15px 15px;;
+    border-radius: 8px;
+    height: 30px;
+
+ 
+  }
+  .shorten::placeholder{
+    color: var(--Gray);
+    font-weight: 500;
+    font-size: var(--Font_size);
+    font-family: var(--Family);
+  }
+  .alerta{
+    display: none;
+  }
+  .shorten-it{
+    width: 80%;
+    padding: 10px;
+    margin: 0px 15px 25px 15px;
+    border-radius: 8px;
+    height: 30px;
+  }
+  .link-contenedor {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid green;
+    background-color: green;
+    display: none;
   }
 }
