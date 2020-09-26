@@ -28,6 +28,7 @@
   .header{
     background: white;
     padding-top: 1em;
+    overflow: hidden;
   }
   .header--contenedor {
     display: flex;
@@ -287,17 +288,25 @@ padding: 50px;
     height: 360px;
     padding: 10px 0px;
     border-radius: 10px;
+    display: grid;
+    transition: 0.3s;
+    position: fixed;
+    right: -100%;
+  }
+  .menu-derecha {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    transition: 0.3s;
-    position: fixed;
-    right: -100%;
-    z-index: 2;
+  }
+  .menu-izquierda{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
   }
   .menu.active {
-    right: 166px;
+    right: 7px;
   }
   .menu li a {
     display: block;
@@ -306,9 +315,14 @@ padding: 50px;
     font-size: var(--Font_size);
     font-weight: 500;
   }
-  .button.secondary {
-    width: 17em;
-    border-top: 1px rgba(156, 154, 154, 0.418) solid;
+  .menu-izquierda:before {
+    content: "";
+    height: 1px;
+    width: 280px;
+    background:rgba(156, 154, 154, 0.418);
+    position: absolute;
+    top: 215px;
+
   }
   
   .line {
@@ -318,14 +332,13 @@ padding: 50px;
   }
 }
 @media screen and (min-width: 376px) {
-
-    .portada {
-      max-width: 1440px;
-      margin: auto;
-      position: relative;
-      background-color: white;
-    }
-  
+  body{
+    background: red;
+  }
+  .wrapper {
+    max-width: 1440px;
+    margin: auto;
+  }
   .container{
     padding: 40px;
     border: 1px yellow solid;
@@ -338,8 +351,26 @@ padding: 50px;
     justify-content: space-around;
   }
   .menu{
-    border: 1px red solid;
-    display: flex;
+    width: 85%;
+    border: 1px purple solid;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: auto;
     justify-content: space-between;
+  }
+  .menu-derecha{
+    /* border: 1px solid blue; */
+    width: 20em;
+    color: var(--Gray);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+  .menu-izquierda{
+    border: 1px solid red;
+    width: 20em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
   }
 }
