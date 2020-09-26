@@ -1,236 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="./css/style.css">
+    <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
 
-
-  <title>Frontend Mentor | Shortly URL shortening API Challenge</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <!-- <style>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <!-- <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style> -->
-</head>
+  </head>
 
-<body>
-  <section class="portada">
-    <header class="container">
-      <div class="header--contenedor">
-        <figure class="logotipo">
-          <img src="./images/logo.svg" srcset=" ./images/logo.svg 1x, ./images/logo.svg 2x" width="120px" alt="logo">
-        </figure>
-        <div class="burguer-button" id="burguer-button">
-          <div class="line line-1"></div>
-          <div class="line line-2"></div>
-          <div class="line line-3"></div>
+  <body>
+    <section class="header">
+      <div class="wrapper">
+        <header class="container">
+          <div class="header--contenedor">
+            <figure class="logotipo">
+              <img
+                src="./images/logo.svg"
+                srcset="./images/logo.svg 1x, ./images/logo.svg 2x"
+                width="120px"
+                alt="logo"
+              />
+            </figure>
+            <div class="burguer-button" id="burguer-button">
+              <div class="line line-1"></div>
+              <div class="line line-2"></div>
+              <div class="line line-3"></div>
+            </div>
+          </div>
+          <nav class="menu" id="menu">
+            <li class="item">
+              <a href="#">Features</a>
+            </li>
+            <li class="item">
+              <a href="#">Pricing</a>
+            </li>
+            <li class="item">
+              <a href="#">Resources</a>
+            </li>
+            <li class="item button secondary">
+              <a href="">Login</a>
+            </li>
+            <li class="item button">
+              <a href="">Sign Up</a>
+            </li>
+          </nav>
+        </header>
+        <div class="illustration--contenedor">
+          <figure>
+            <img
+              src="./images/illustration-working.svg"
+              alt="illustration-working"
+              srcset="
+                ./images/illustration-working.svg 1x,
+                ./images/illustration-working.svg 2x
+              "
+              width="518px"
+            />
+          </figure>
         </div>
       </div>
-      <nav class="menu" id="menu">
-        <li class="item">
-          <a href="#">Features</a>
-        </li>
-        <li class="item">
-          <a href="#">Pricing</a>
-        </li>
-        <li class="item">
-          <a href="#">Resources</a>
-        </li>
-        <li class="item button secondary">
-          <a href="">Login</a>
-        </li>
-        <li class="item button">
-          <a href="">Sign Up</a>
-        </li>
-      </nav>
-      </div>
-    </header>
-    <div class="illustration--contenedor">
-      <figure>
-        <img src="./images/illustration-working.svg" alt="illustration-working"
-          srcset=" ./images/illustration-working.svg 1x, ./images/illustration-working.svg 2x" width="518px">
-      </figure>
-    </div>
-  </section>
-  <section class="describe">
-    <div class="tittle">
-      <h1>More than just shorter links</h1>
-    </div>
-    <div class="describe">
-      <p> Build your brand’s recognition and get detailed insights
-        on how your links are performing.</p>
-    </div>
-    <div class="get-started btn">
-      Get Started
-    </div>
-  </section>
-  <section class="formulario">
-    <div class="formulario--contenedor">
-      <input type="url" name="url shortener" class="shorten" id="" placeholder="Shorten a link here...">
-      <span class="alerta"><em>Please add a link</em></span>
-      <span class="shorten-it btn">Shorten It!</span>
-    </div>
-    <div class="link-contenedor">
-      <span class="long-link">q</span>
-      <span class="short-link">q</span>
-      <span class="copy btn">Copy</span>
-    </div>
-  </section>
-  <section class="propaganda">
-    <div class="propaganda--tabla">
-      <h2>Advanced Statistics </h2>
-      <div class="descripcion">
-        Track how your links are performing across the web with our
-        advanced statistics dashboard.
-      </div>
-    </div>
-    <div class="caja-brand caja">
-      <div class="contenedor-icon">
-        <img src="./images/icon-brand-recognition.svg" alt="icon brand" class="icon">
-      </div>
-      <div class="caja-titulo">
-        <h3>Brand Recognition</h3>
-      </div>
-      <div class="caja-descripcion description">
-        <p>
-          Boost your brand recognition with each click. Generic links don’t
-          mean a thing. Branded links help instil confidence in your content.
-        </p>
-      </div>
-    </div>
-    <div class="separador"></div>
-    <div class="caja-detailed caja">
-      <div class="contenedor-icon">
-        <img src="./images/icon-detailed-records.svg" alt="icon detailed" class="icon">
-      </div>
-      <div class="caja-titulo">
-        <h3>Detailed Records</h3>
-      </div>
-      <div class="caja-descripcion description">
-        <p>
-          Gain insights into who is clicking your links. Knowing when and where
-          people engage with your content helps inform better decisions.
-        </p>
-      </div>
-    </div>
-    <div class="separador"></div>
-    <div class="caja-fully caja">
-      <div class="contenedor-icon">
-        <img src="./images/icon-fully-customizable.svg" alt="icon fully" class="icon">
-      </div>
-
-      <div class="caja-titulo">
-        <h3>Fully Customizable</h3>
-      </div>
-      <div class="caja-descripcion description">
-        <p>
-          Improve brand awareness and content discoverability through customizable
-          links, supercharging audience engagement.
-        </p>
-      </div>
-    </div>
-  </section>
-  <section class="segunda-parte describe">
-    <div class="tittle">
-      <h2>Boost your links today</h2>
-    </div>
-    <div class="get-started btn">
-      Get Started
-    </div>
-  </section>
-  <footer class="footer">
-    <div class="footer-container">
-      <figure class="footer-logotipo">
-        <img src="./images/logo-footer.svg" srcset="./images/logo-footer.svg 1x, ./images/logo-footer.svg 2x" width="120px" alt="logo-footer" class="footer-icono">
-      </figure>
-      <div class="features table">
-        <div class="table-titulo">
-          <h4>
-            Features
-          </h4>
+    </section>
+    <section class="describe">
+      <div class="wrapper">
+        <div class="describe-contenedor">
+          <div class="tittle">
+            <h1>More than just shorter links</h1>
+          </div>
+            <p>
+              Build your brand’s recognition and get detailed insights on how your
+              links are performing.
+            </p> 
+          <div class="get-started btn">Get Started</div>
         </div>
-        <ul>
-          <li>
-            Link Shortening
-          </li>
-          <li>
-            Branded Links
-          </li>
-          <li>
-            Analytics
-          </li>
-        </ul>
       </div>
-      <div class="features table">
-        <div class="table-titulo">
-          <h4>
-            Resources
-          </h4>
+    </section>
+    <section class="formulario">
+      <div class="wrapper">
+        <div class="formulario--contenedor">
+          <input
+            type="url"
+            name="url shortener"
+            class="shorten"
+            id=""
+            placeholder="Shorten a link here..."
+          />
+          <!-- <span class=".empty-text"><em>Please add a link</em></span> -->
+          <span class="shorten-it btn">Shorten It!</span>
         </div>
-        <ul>
-          <li>
-            Blog
-          </li>
-          <li>
-            Developers
-          </li>
-          <li>
-            Support
-          </li>
-        </ul>
-      </div>
-      <div class="features table">
-        <div class="table-titulo">
-          <h4>
-            Company
-          </h4>
+        <div class="link-contenedor">
+          <span class="long-link">q</span>
+          <span class="short-link">q</span>
+          <span class="copy btn">Copy</span>
         </div>
-        <ul>
-          <li>
-            About
-          </li>
-          <li>
-            Our Team
-          </li>
-          <li>
-            Careers
-          </li>
-          <li>
-            Contact
-          </li>
-        </ul>
       </div>
-    </div>
-<div class="social">
-  <div class="social-contenedor">
-    <div class="facebook redes">
-      <img src="./images/icon-facebook.svg" alt="facebook" class="facebook">
-    </div>
-    <div class="twitter redes">
-      <img src="./images/icon-twitter.svg" alt="twitter" class="twitter">
-    </div>
-    <div class="pinteres redes">
-      <img src="./images/icon-pinterest.svg" alt="pinteres" class="pinteres">
-    </div>
-    <div class="instagram redes">
-      <img src="./images/icon-instagram.svg" alt="instagram" class="instagram">
-    </div>
-  </div>
-</div>
-  </footer>
+    </section>
+    <section class="propaganda">
+      <div class="wrapper">
+        <div class="propaganda-contenedor">
+          <div class="propaganda--tabla">
+            <h2>Advanced Statistics</h2>
+            <div class="descripcion">
+              Track how your links are performing across the web with our advanced
+              statistics dashboard.
+            </div>
+          </div>
+          <div class="caja-brand caja">
+            <div class="contenedor-icon">
+              <img
+                src="./images/icon-brand-recognition.svg"
+                alt="icon brand"
+                class="icon"
+              />
+            </div>
+            <div class="caja-titulo">
+              <h3>Brand Recognition</h3>
+            </div>
+            <div class="caja-descripcion description">
+              <p>
+                Boost your brand recognition with each click. Generic links don’t
+                mean a thing. Branded links help instil confidence in your content.
+              </p>
+            </div>
+          </div>
+          <div class="separador"></div>
+          <div class="caja-detailed caja">
+            <div class="contenedor-icon">
+              <img
+                src="./images/icon-detailed-records.svg"
+                alt="icon detailed"
+                class="icon"
+              />
+            </div>
+            <div class="caja-titulo">
+              <h3>Detailed Records</h3>
+            </div>
+            <div class="caja-descripcion description">
+              <p>
+                Gain insights into who is clicking your links. Knowing when and
+                where people engage with your content helps inform better decisions.
+              </p>
+            </div>
+          </div>
+          <div class="separador"></div>
+          <div class="caja-fully caja">
+            <div class="contenedor-icon">
+              <img
+                src="./images/icon-fully-customizable.svg"
+                alt="icon fully"
+                class="icon"
+              />
+            </div>
+    
+            <div class="caja-titulo">
+              <h3>Fully Customizable</h3>
+            </div>
+            <div class="caja-descripcion description">
+              <p>
+                Improve brand awareness and content discoverability through
+                customizable links, supercharging audience engagement.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="segunda-parte">
+      <div class="wrapper">
+        <div class="describe-contenedor">
+          <div class="tittle">
+            <h2>Boost your links today</h2>
+          </div>
+          <div class="get-started btn">Get Started</div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="wrapper">
+        <div class="footer-container">
+          <figure class="footer-logotipo">
+            <img
+              src="./images/logo-footer.svg"
+              srcset="./images/logo-footer.svg 1x, ./images/logo-footer.svg 2x"
+              width="120px"
+              alt="logo-footer"
+              class="footer-icono"
+            />
+          </figure>
+          <div class="features table">
+            <div class="table-titulo">
+              <h4>Features</h4>
+            </div>
+            <ul>
+              <li>Link Shortening</li>
+              <li>Branded Links</li>
+              <li>Analytics</li>
+            </ul>
+          </div>
+          <div class="features table">
+            <div class="table-titulo">
+              <h4>Resources</h4>
+            </div>
+            <ul>
+              <li>Blog</li>
+              <li>Developers</li>
+              <li>Support</li>
+            </ul>
+          </div>
+          <div class="features table">
+            <div class="table-titulo">
+              <h4>Company</h4>
+            </div>
+            <ul>
+              <li>About</li>
+              <li>Our Team</li>
+              <li>Careers</li>
+              <li>Contact</li>
+            </ul>
+          </div>
+        </div>
+        <div class="social">
+          <div class="social-contenedor">
+            <div class="facebook redes">
+              <img
+                src="./images/icon-facebook.svg"
+                alt="facebook"
+                class="facebook"
+              />
+            </div>
+            <div class="twitter redes">
+              <img
+                src="./images/icon-twitter.svg"
+                alt="twitter"
+                class="twitter"
+              />
+            </div>
+            <div class="pinteres redes">
+              <img
+                src="./images/icon-pinterest.svg"
+                alt="pinteres"
+                class="pinteres"
+              />
+            </div>
+            <div class="instagram redes">
+              <img
+                src="./images/icon-instagram.svg"
+                alt="instagram"
+                class="instagram"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
 
-
-  <!--
+    <!--
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Miguel Angel Goda Molina</a>.
   </div> -->
-  <script src="./js/javascript.js"></script>
-</body>
-
+    <script src="./js/javascript.js"></script>
+  </body>
 </html>

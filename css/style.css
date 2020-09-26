@@ -22,20 +22,17 @@
     font-family: var(--Family);
     font-size: var(--Font_size);
   }
-  .portada {
-    max-width: 375px;
-    margin: auto;
-    position: relative;
-    background-color: white;
+  .wrapper{
+    padding: 0 15px;
   }
-  .container {
-    padding: 10px;
+  .header{
+    background: white;
+    padding-top: 1em;
   }
   .header--contenedor {
     display: flex;
     justify-content: space-between;
   }
-
   .menu li {
     list-style: none;
   }
@@ -57,17 +54,11 @@
     justify-content: center;
   }
 
-  .illustration--contenedor {
-    display: flex;
-    justify-content: flex-start;
-    overflow: hidden;
-  }
-  .describe {
+  .describe-contenedor {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 10px;
   }
   .describe h1 {
     font-weight: 700;
@@ -128,9 +119,7 @@
     font-size: var(--Font_size);
     font-family: var(--Family);
   }
-  .alerta {
-    display: none;
-  }
+  
   .shorten-it {
     width: 80%;
     padding: 10px;
@@ -138,23 +127,36 @@
     border-radius: 8px;
     height: 30px;
   }
+    /* .empty {
+    border: 2px solid #f74d4d;
+  }
+  .empty-text {
+    visibility: hidden;
+    border: 1px solid red;
+    position: absolute;
+    top: 75px;
+    left: 65px;
+    color: #f74d4d;
+    font-size: 0.8em;
+  } */
   .link-contenedor {
     width: 350px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid green;
-    background-color: green;
     display: none;
   }
+
   .propaganda {
     width: 350;
     background-color: var(--Gray);
+    margin-top: -85px;
+  }
+  .propaganda-contenedor{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: -85px;
   }
   .propaganda--tabla {
     margin-top: 140px;
@@ -222,6 +224,9 @@
     width: 100%;
     margin: 0px;
     background-color: var(--Dark_Violet);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .footer{
     background-color: var(--Very_Dark_Violet);
@@ -259,6 +264,7 @@ padding: 50px;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
 }
 .redes{
   margin: 0px 12px 0px 12px;
@@ -291,7 +297,7 @@ padding: 50px;
     z-index: 2;
   }
   .menu.active {
-    right: 7px;
+    right: 166px;
   }
   .menu li a {
     display: block;
