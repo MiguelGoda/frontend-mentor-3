@@ -338,6 +338,7 @@ body {
 @media screen and (min-width: 376px) {
   .wrapper {
     max-width: 1440px;
+    border: 1px solid peachpuff;
     margin: auto;
   }
   
@@ -350,7 +351,6 @@ body {
   
   .container {
     padding: 50px 10px;
-    border: 1px blue solid;
     display: flex;
     justify-content: space-between;
   }
@@ -360,7 +360,6 @@ body {
     justify-content: space-between;
   }
   .menu-derecha {
-    border: 1px solid blue;
     width: 20em;
     color: var(--Gray);
     display: flex;
@@ -368,10 +367,50 @@ body {
     flex-direction: row;
   }
   .menu-izquierda {
-    /* border: 1px solid red; */
     width: 20em;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+  }
+  .describe{
+    border: 1px solid red;
+  }
+  .describe-contenedor{
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  .illustration--contenedor{
+    background: red;
+    margin: 0;
+  }
+  .describe-propaganda{
+    border:1px solid blue;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .describe-propaganda h1{
+    margin-top: 25px;
+  font-weight: 700;
+  font-size: 60px;
+  text-align: center;
+  }
+  .formulario--contenedor{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  padding: 30px;
+  }
+  .shorten {
+    width: 1500px;
+    padding: 10px;
+    margin: 0;
+    border-radius: 8px;
+    height: 30px;
   }
 }
