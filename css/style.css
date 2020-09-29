@@ -447,12 +447,20 @@ body {
     
     padding-top: 100px;
   }
+  
   .contenedor-cajas{
     display: flex;
     flex-direction: row;
     align-items: unset;
     border: 1px solid red;
-    justify-content: space-around;
+    justify-content: space-between;
+    height: 450px;
+    padding-bottom: 50px;
+    position: relative;
+  }
+  .caja{
+    z-index: 2;
+    position: relative;
   }
   .caja-brand{
     align-self: flex-start;
@@ -460,8 +468,10 @@ body {
   }
   .caja-detailed{
     align-self: center;
+    margin-bottom: 0;
   }
   .caja-fully{
     align-self: flex-end;
+    margin-bottom: 0;
   }
 }
