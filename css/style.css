@@ -158,7 +158,8 @@ body {
   background-color: var(--Gray);
   margin-top: -85px;
 }
-.propaganda-contenedor {
+
+.contenedor-cajas{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -338,7 +339,6 @@ body {
 @media screen and (min-width: 376px) {
   .wrapper {
     max-width: 1440px;
-    border: 1px solid peachpuff;
     margin: auto;
   }
   
@@ -363,54 +363,105 @@ body {
     width: 20em;
     color: var(--Gray);
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-direction: row;
   }
   .menu-izquierda {
     width: 20em;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-end;
+  }
+  .menu-izquierda * + * {
+    margin-left: 60px;
   }
   .describe{
-    border: 1px solid red;
+    overflow: visible;
   }
   .describe-contenedor{
-    border: 1px solid blue;
+    margin: 50px 0 150px 0;
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
   }
-  .illustration--contenedor{
-    background: red;
-    margin: 0;
-  }
+
   .describe-propaganda{
-    border:1px solid blue;
-    width: 500px;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    margin-top: 90px;
   }
   .describe-propaganda h1{
-    margin-top: 25px;
+    margin-top: 0;
   font-weight: 700;
-  font-size: 60px;
-  text-align: center;
+  font-size: 95px;
+  text-align: left;
+  }
+  .describe-propaganda p {
+    width: auto;
+    font-size: 27px;
+    text-align: left;
+  }
+  .btn{
+    font-weight: 700;
+    font-size: 1.2em;
+  }
+  .get-started{
+    padding-top: 18px;
+    margin-top: 40px;
+  }
+  .illustration--contenedor{
+    margin: 0;
+    width: 50%;
+  }
+  .figure{
+    margin-left: 100px;
+  }
+  .illustration--contenedor img{
+    position: absolute;
+    width: 1000px;
   }
   .formulario--contenedor{
-    width: 100%;
+    width: auto;
     display: flex;
     flex-direction: row;
     align-items: center;
-  padding: 30px;
+    padding: 40px;
   }
   .shorten {
     width: 1500px;
-    padding: 10px;
-    margin: 0;
+    margin: 0 30px 0 0;
     border-radius: 8px;
     height: 30px;
+  }
+  .shorten-it{
+    margin: 0;
+    width: 150px;
+  }
+  .propaganda{
+    margin-top: -200px;
+  }
+  .propaganda--tabla{
+    
+    padding-top: 100px;
+  }
+  .contenedor-cajas{
+    display: flex;
+    flex-direction: row;
+    align-items: unset;
+    border: 1px solid red;
+    justify-content: space-around;
+  }
+  .caja-brand{
+    align-self: flex-start;
+
+  }
+  .caja-detailed{
+    align-self: center;
+  }
+  .caja-fully{
+    align-self: flex-end;
   }
 }
